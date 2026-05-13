@@ -346,6 +346,10 @@ main { padding: 0 var(--gutter); }
   .news-list .when { padding-top: 3px; }
 }
 
+.research-lines {
+  padding-left: 2em;
+}
+
 /* ------------------------------------------------------------ PAPERS */
 .paper-group-heading {
   font-family: var(--font-display);
