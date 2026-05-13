@@ -346,9 +346,12 @@ main { padding: 0 var(--gutter); }
   .news-list .when { padding-top: 3px; }
 }
 
-.research-lines {
-  padding-left: 2em;
+.research-line {
+  padding-left: 3em;
+  text-indent: -1.5em;
+  margin: 0 0 0.5em;
 }
+.research-line:last-of-type { margin-bottom: 1em; }
 
 /* ------------------------------------------------------------ PAPERS */
 .paper-group-heading {
