@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV — Ye Joon Lee</title>
+<meta name="description" content="Curriculum vitae of Ye Joon Lee — PhD Candidate at the Kellogg School of Management, Northwestern University.">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="CV — Ye Joon Lee">
+<meta property="og:description" content="Curriculum vitae of Ye Joon Lee.">
+<meta property="og:image" content="assets/portrait.jpg">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+
+<style>
+  .cv-card {
+    text-align: center;
+    padding: 32px 0 24px;
+  }
+  .cv-title {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin: 0 0 18px;
+  }
+  .cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .cv-download:hover { background: var(--accent-ink); color: #fff; text-decoration: none; }
+  .cv-download svg { width: 14px; height: 14px; }
+  .cv-updated {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--fg-faint);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 14px 0 0;
+  }
+
+  .cv-viewer {
+    margin: 32px 0 64px;
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    max-height: calc(100vh - 160px);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-muted);
+  }
+  .cv-viewer iframe {
+    width: 100%; height: 100%;
+    border: 0;
+    display: block;
+  }
+  .cv-fallback {
+    padding: 32px;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--fg-muted);
+  }
+  .cv-fallback a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Primary">
+  <div class="inner">
+    <a href="index.html" class="brand plain">
+      <span class="brand-name">Ye Joon Lee</span>
+    </a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html" aria-current="page">CV</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container-mid">
+
+    <section class="cv-card">
+      <h1 class="cv-title">Curriculum Vitae</h1>
+      <a class="cv-download" href="assets/cv.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v14m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+        Download CV
+      </a>
+      <p class="cv-updated" id="cv-updated"></p>
+    </section>
+
+    <div class="cv-viewer">
+      <iframe src="assets/cv.pdf#view=FitH&toolbar=0" title="Ye Joon Lee — CV">
+        <div class="cv-fallback">
+          Your browser cannot display the inline PDF.
+          <a href="assets/cv.pdf" target="_blank" rel="noopener">Open the CV in a new tab</a>.
+        </div>
+      </iframe>
+    </div>
+
+  </div>
+</main>
+
+<footer class="page-footer">
+  © 2026 Ye Joon Lee · All rights reserved.
+</footer>
+
+<script>
+  (async () => {
+    try {
+      const r = await fetch('assets/cv.pdf', {method: 'HEAD'});
+      const lm = r.headers.get('last-modified');
+      if (lm) {
+        const d = new Date(lm);
+        const txt = d.toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
+        document.getElementById('cv-updated').textContent = 'Last updated ' + txt;
+      }
+    } catch {}
+  })();
+</script>
+
+</body>
+</html>

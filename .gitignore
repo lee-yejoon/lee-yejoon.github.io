@@ -1,0 +1,12 @@
+# Working folders — not for the live site
+scraps/
+scratch/
+uploads/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
