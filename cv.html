@@ -82,19 +82,9 @@
   }
   .cv-fallback a { color: var(--accent); }
 
-  .cv-mobile-note { display: none; }
   @media (max-width: 640px) {
     .cv-viewer { display: none; }
     .cv-card { padding: 48px 0 96px; }
-    .cv-mobile-note {
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 12px;
-      color: var(--fg-faint);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 18px 0 0;
-    }
   }
 </style>
 </head>
@@ -123,7 +113,6 @@
         Download CV
       </a>
       <p class="cv-updated" id="cv-updated"></p>
-      <p class="cv-mobile-note">Tap above to open the PDF</p>
     </section>
 
     <div class="cv-viewer">
