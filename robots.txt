@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yejoonlee.com/sitemap.xml
