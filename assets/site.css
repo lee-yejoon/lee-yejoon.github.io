@@ -417,7 +417,7 @@ main { padding: 0 var(--gutter); }
   margin: 0;
   line-height: 1.5;
 }
-.paper-authors strong { color: var(--fg-soft); font-weight: 600; }
+.paper-authors strong { color: var(--fg-muted); font-weight: 600; }
 .eq-note { color: var(--accent); font-weight: 600; }
 .eq-note-label {
   font-size: 11px;
