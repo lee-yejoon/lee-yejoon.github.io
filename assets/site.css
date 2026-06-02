@@ -186,12 +186,12 @@ main { padding: 0 var(--gutter); }
 
 /* ------------------------------------------------------------ HERO */
 .hero {
-  padding: 80px 0 40px;
+  padding: 60px 0 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 200px);
 }
 .hero-text { max-width: 720px; }
 .hero-name {
@@ -232,7 +232,6 @@ main { padding: 0 var(--gutter); }
   max-width: 360px;
   justify-self: start;
 }
-.hero-portrait .socials { justify-content: center; margin-top: 16px; }
 .hero-portrait .frame {
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -249,13 +248,13 @@ main { padding: 0 var(--gutter); }
   .hero {
     grid-template-columns: 1fr 360px;
     gap: 40px;
-    padding: 80px 0 60px;
-    min-height: calc(100vh - 80px);
+    padding: 60px 0 60px;
+    min-height: calc(100vh - 120px);
   }
   .hero-portrait {
     width: 360px; max-width: 360px;
     justify-self: end;
-    margin-top: 104px;
+    margin-top: 96px;
     margin-right: -20px;
   }
 }
