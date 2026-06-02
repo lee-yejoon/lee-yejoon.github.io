@@ -25,16 +25,16 @@
 <style>
   .cv-card {
     text-align: center;
-    padding: 32px 0 24px;
+    padding: 28px 0 14px;
   }
   .cv-title {
     font-family: var(--font-display);
-    font-size: clamp(26px, 3vw, 32px);
+    font-size: clamp(21px, 2.4vw, 25px);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.01em;
     color: var(--fg);
-    margin: 0 0 18px;
+    margin: 0 0 16px;
   }
   .cv-download {
     display: inline-flex;
@@ -45,7 +45,7 @@
     color: #fff;
     border-radius: 4px;
     font-family: var(--font-sans);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     text-decoration: none;
   }
@@ -53,7 +53,7 @@
   .cv-download svg { width: 14px; height: 14px; }
   .cv-updated {
     font-family: var(--font-sans);
-    font-size: 12px;
+    font-size: 13px;
     color: var(--fg-faint);
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -61,7 +61,7 @@
   }
 
   .cv-viewer {
-    margin: 32px 0 64px;
+    margin: 22px 0 64px;
     width: 100%;
     aspect-ratio: 8.5 / 11;
     max-height: calc(100vh - 160px);
@@ -79,7 +79,7 @@
     padding: 32px;
     text-align: center;
     font-family: var(--font-sans);
-    font-size: 14px;
+    font-size: 15px;
     color: var(--fg-muted);
   }
   .cv-fallback a { color: var(--accent); }
@@ -135,7 +135,6 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v14m0 0-5-5m5 5 5-5M5 21h14"/></svg>
         Download CV
       </a>
-      <p class="cv-updated" id="cv-updated"></p>
     </section>
 
     <div class="cv-viewer">
@@ -153,20 +152,6 @@
 <footer class="page-footer">
   © 2026 Ye Joon Lee · All rights reserved.
 </footer>
-
-<script>
-  (async () => {
-    try {
-      const r = await fetch('yejoon-lee_cv.pdf', {method: 'HEAD'});
-      const lm = r.headers.get('last-modified');
-      if (lm) {
-        const d = new Date(lm);
-        const txt = d.toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
-        document.getElementById('cv-updated').textContent = 'Last updated ' + txt;
-      }
-    } catch {}
-  })();
-</script>
 
 </body>
 </html>
