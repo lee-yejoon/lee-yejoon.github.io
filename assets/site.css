@@ -353,12 +353,10 @@ main { padding: 0 var(--gutter); }
   .news-list .when { padding-top: 3px; }
 }
 
-.research-line {
-  padding-left: 3em;
-  text-indent: -1.5em;
-  margin: 0 0 0.5em;
-}
-.research-line:last-of-type { margin-bottom: 1em; }
+.section-head .research-line { margin: 0 0 0.45em; padding-left: 1.6em; }
+/* empty line before the first stream and after the last */
+.section-head p:not(.research-line) + .research-line { margin-top: 1em; }
+.section-head .research-line:has(+ p:not(.research-line)) { margin-bottom: 1em; }
 
 /* ------------------------------------------------------------ PAPERS */
 .paper-group-heading {
